@@ -1,0 +1,23 @@
+{
+  "name": "gopeoplego",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pifmat/gopeoplego.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pifmat/gopeoplego/issues"
+  },
+  "homepage": "https://github.com/pifmat/gopeoplego#readme"
+}
