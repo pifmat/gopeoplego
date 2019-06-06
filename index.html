@@ -64,36 +64,85 @@
             <div class="page">
                     <div class="ctn">
                         <img class="img-responsive" src="assets/img/Triangolo.png" alt="">
-                        <div class="circle"> <div class="circle-inner"></div> </div>
+                        <div class="circle-outer">
+                            <div class="circle top">
+                                <div class="circle-inner"></div>
+                            </div>
+                            <a class="info" style="color:#fff;">Info</a>
+                        </div>
                         <div class="circle sx"> <div class="circle-inner"></div> </div>
                         <div class="circle dx"> <div class="circle-inner"></div> </div>
-                        <!--div class="border-right"></div>
-                        <div class="border-left"></div-->
-                        <!--div class="border-bottom slice"></div-->
-                        <!--svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="auto" height="auto" viewBox="0 0 auto auto" preserveAspectRatio="xMidYMid meet" >
-                            <rect id="svgEditorBackground" x="0" y="0" width="auto" height="auto" style="fill: none; stroke: none;"/>
-                                <defs id="svgEditorDefs">
-                                    <polygon id="svgEditorShapeDefs" style="fill:none; vector-effect: non-scaling-stroke; stroke-width: 9px; stroke:url(#lgrd2-peachpuff-sienna-v);"/>
-                                    <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-peachpuff-sienna-h" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="0%">
-                                        <stop offset="0%" style="stop-color:peachpuff;  stop-opacity:1;"/>
-                                        <stop offset="100%" style="stop-color:sienna;  stop-opacity:1"/>
-                                    </linearGradient>
-                                    <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-fire" spreadMethod="pad" x1="0%" x2="100%" y1="0%" y2="0%">
-                                        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1"/><stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1"/>
-                                    </linearGradient>
-                                    <linearGradient gradientUnits="objectBoundingBox" id="lgrd2-peachpuff-sienna-v" spreadMethod="pad" x1="0%" x2="0%" y1="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color: red; stop-opacity: 0.84;"/><stop offset="100%" style="stop-color: mediumblue; stop-opacity: 1;"/>
-                                    </linearGradient>
-                                </defs>
-                                    <path d="M-3.1445086705202296,-7.4177572254335375l-4.000000000000002,6.928000000000001h8.00000000000001Z" style="fill:none; vector-effect: non-scaling-stroke; stroke-width: 9px; stroke:url(#lgrd2-peachpuff-sienna-v);" id="e3_shape" transform="matrix(43.25 0 0 43.25 679 381.818)"/>
-                        </svg-->
-
                         
+                        <!--svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
+                            <defs>  
+                              <linearGradient id="logo-gradient" x1="35%" y1="15%" x2="100%" y2="100%" > 
+                                  
+                                <stop offset="0%" stop-color="yellow">
+                                    <animate attributeName="stop-color" values="yellow;red;blue" dur="4s" repeatCount="indefinite"></animate>
+                                </stop>
+                                <stop offset="50%" stop-color="blue">
+                                    <animate attributeName="stop-color" values="red; blue;yellow" dur="4s" repeatCount="indefinite"></animate>
+                                </stop>
+                                  
+                                <stop offset="75%" stop-color="blue">
+                                    <animate attributeName="stop-color" values="blue;yellow;red" dur="4s" repeatCount="indefinite"></animate>
+                                </stop>
+                                <stop offset="100%" stop-color="blue">
+                                    <animate attributeName="stop-color" values="yellow;red;blue" dur="4s" repeatCount="indefinite"></animate>
+                                </stop>
+                                <stop offset="75%" stop-color="blue">
+                                        <animate attributeName="stop-color" values="red;blue;yellow" dur="4s" repeatCount="indefinite"></animate>
+                                    </stop>
+                                <stop offset="50%" stop-color="blue">
+                                    <animate attributeName="stop-color" values="blue; yellow;red" dur="4s" repeatCount="indefinite"></animate>
+                                </stop>
+                                <stop offset="0%" stop-color="yellow">
+                                    <animate attributeName="stop-color" values="yellow;red;blue" dur="4s" repeatCount="indefinite"></animate>
+                                </stop>
+                                  
+                      
+                              </linearGradient> 
+                      
+                          </defs>
+                        <g transform="translate(0,-952.36218)"><path  fill="url('#logo-gradient')" d="m 49.625,966.37273 a 3.0003,3.0003 0 0 0 -2.25,1.5625 L 11.375001,1033.9352 A 3.0003,3.0003 0 0 0 14,1038.3727 l 72,0 a 3.0003,3.0003 0 0 0 2.625,-4.4375 l -36,-65.99997 a 3.0003,3.0003 0 0 0 -3,-1.5625 z m 0.375,9.25 30.9688,56.74997 -61.9376,0 L 50,975.62273 z" fill-opacity="1" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"/></g></svg-->
+                        <!--div class="content"></div-->
                     </div>
+                    
                 <!--div class="triangle">
                     <div class="inner-triangle"></div>
                     
                 </div-->
+                <div class="inner-box">
+                    <div id="app">
+
+                        <div class="product-image">
+                            <a :href="href"> <img v-bind:src="image" class="img-responsive" /></a>
+                        </div>
+                        
+                        <div class="product-info">
+                            <h1>{{ product }}</h1>
+                            <p class="stock" v-if="inStock">In stock</p>
+                            <p class="stock" v-else="inStock">Out of stock</p>
+                            <span v-if="onSale">On Sale</span>
+                            <span v-else="onSale"></span>
+                            <ul>
+                                <li v-for="detail in details">{{ detail }}</li>
+                            </ul>
+                            <div v-for="variant in variants" :key="variant.variantId">
+                                <p>{{ variant.variantColor }}</p>
+                            </div>
+                            <ul>
+                                <li v-for="size in sizes">{{ size }}</li>
+                            </ul>
+                        </div>
+                        <button v-on:click="addToCart">Add to cart</button>
+                        <div>
+                            <p>Cart({{ cart }})</p>
+                        </div> 
+                    </div> 
+                            
+                    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+                </div>
             </div>
             
                     

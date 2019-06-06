@@ -46,13 +46,16 @@ body{
     transition: all ease-in 2s;
     /*animation: spin 10s linear infinite;
     /*Set our animation play state to paused initially */
+    animation: translate 1.5s linear 1;
     animation-play-state: paused; 
+    animation-fill-mode: forwards;
 }
-
+/*
 .ctn:hover{
     transition: all ease-in 2s;
     animation-play-state: running;
 }
+*/
 .ctn img{
     position: relative;
     z-index:2;
@@ -66,29 +69,41 @@ body{
     background: linear-gradient(to left, blue, cyan);
     padding: 10px;
     border-radius: 100%;
-    top: 25px;
+    top: 50%;
     left: 0;
     right: 0;
-    display: inline-block;
+    display: inline-table;
     margin:0 auto;
     z-index:2;
-    animation: spin 1.5s linear infinite;
+    /*animation: spin 1.5s linear infinite;*/
     mix-blend-mode: difference;
+    animation: spin 1s linear 1 infinite;
+    animation-fill-mode: infinite;
+    
+}
+
+.circle.top{
+    animation: translateTop 1.5s linear 2s forwards,spin 1s linear infinite;
 }
 
 .circle.sx{
-    top: unset;
-    bottom: 22px;
-    left: -10px;
-    right: unset;
     background: linear-gradient(to left, yellow, green);
+    animation: translateSx 1.5s linear 2s forwards,spin 1s linear infinite;
 }
+
 .circle.dx{
-    top: unset;
-    bottom: 22px;
-    right: -10px;
-    left: unset;
     background: linear-gradient(to left, red, blue);
+    animation: translateDx 1.5s linear 2s forwards,spin 1s linear infinite;
+    /*animation-fill-mode: forwards;*/
+    
+    
+}
+
+.circle.top .circle-inner span:before{
+    content:'Info';
+    position: absolute;
+    top:0;
+    left:0;
 }
 
 .circle-inner{
@@ -97,22 +112,145 @@ body{
     border-radius: 100%;
 }
 
-
 .slice{
     -webkit-box-decoration-break: slice;
     -o-box-decoration-break: slice;
     box-decoration-break: slice;
 }
+/*
+.content{
+    position: absolute;
+    top: -4%;
+    right: -35%;
+    background: linear-gradient(to left, red, blue);
+    max-width: 100%;
+    height: 100%;
+    width: 95%;
+    transform: rotateX(300deg) rotateY(305deg) rotateZ(210deg);
+    animation: grow 1.5s linear 1;
+}
+*/
+.content{
+    position: absolute;
+    top: 49%;
+    right: -21%;
+    background: linear-gradient(to left, red, blue);
+    max-width: 100%;
+    height: 1%;
+    width: 95%;
+    transform: rotateX(300deg) rotateY(305deg) rotateZ(210deg);
+    animation: grow 1.5s linear 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused; 
+}
+.ctn:hover .content{
+    animation-play-state: running;
+}
+.stock{
+    color:#fff;
+    font-size:14px;
+    font-family:Helvetica, Arial,sans-serif;
+}
 
-
+@keyframes translateTop {
+    100% {
+        top: 25px;
+        left: 0;
+        right: 0;
+        animation-fill-mode: forwards;
+     }
+}
+@keyframes translateSx {
+    100% {
+        top: 83%;
+        left: -92%;
+        
+    }
+}
+@keyframes translateDx {
+    100% {
+        left: 89%;
+        top: 83%;
+        animation-fill-mode: forwards;
+    }
+}
+@keyframes translate {
+    100% {
+        transform: translate3d(-20px,30px,50px);
+     }
+}
+@keyframes grow {
+    100% {
+        top: -4%;
+        right: -35%;
+        background: linear-gradient(to left, red, blue);
+        max-width: 100%;
+        height: 100%;
+        width: 95%;
+        transform: rotateX(300deg) rotateY(305deg) rotateZ(210deg);
+        animation: grow 1.5s linear 1;
+     }
+}
+/*
 @keyframes spin {
-    100% {transform: rotate(1turn); }
-  }
+    100% {
+        transform: rotate(1turn);
+        animation-iteration-count: infinite;
+    }
+}
+*/
+@media only screen and (max-width: 1920px) {
+    .ctn{
+        max-width:40%;
+    }
+    .circle{
+        padding: 5px;
 
+    }
+    .circle.sx{
+        top: unset;
+        bottom: 1px;
+        left: -7px;
+        right: unset;
+        background: linear-gradient(to left, yellow, green);
+    }
+    .circle.dx {
+        top: unset;
+        bottom: 2px;
+        right: -7px;
+        left: unset;
+    }
+    .circle-inner{
+        padding: 0.4rem;
+    }
+    
+}
 
 
 @media only screen and (max-width: 600px) {
     .ctn{
         max-width:40%;
     }
-  }
+    .circle{
+        padding: 5px;
+
+    }
+    .circle.sx{
+        top: unset;
+        bottom: 1px;
+        left: -7px;
+        right: unset;
+        background: linear-gradient(to left, yellow, green);
+    }
+    .circle.dx {
+        top: unset;
+        bottom: 2px;
+        right: -7px;
+        left: unset;
+    }
+    .circle-inner{
+        padding: 0.4rem;
+    }
+    
+    
+}
